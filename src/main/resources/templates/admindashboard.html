@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+  <title>Dashboard</title>
+  <link rel="stylesheet" th:href="@{/css/dashboard.css}" type="text/css">
+    <link rel="icon" type="image/ico" th:href="@{/static/favicon.ico}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+</head>
+
+<body>
+ <div class="navbar">
+     <p class="logo"><strong>U</strong>niversityOf<span>Rwanda</span></p>
+     <br>
+     <div class="primary-nav">
+         <ul>
+             <h4>Menu</h4>
+             <br>
+             <li><a class="ah" href="/home">Home</a></li><br>
+             <li><a class="ah" href="#">About Us</a></li><br>
+             <li><a class="ah" href="/departments">Department</a></li><br>
+             <li><a class="ah" href="/leaves">Employee Leaves</a></li><br>
+             <li><a class = "a" th:href="@{/logout}">Logout</a></li>
+    </ul>
+     </div>
+ </div>
+ <div class="nav">
+     <form th:action="@{/search}" method="get">
+         <br>
+         <input class="searchinput" type="text" name="keyword"  size="30" th:value="${keyword}" required />
+         &nbsp;<input type="submit" class="fbutton" value="Search">
+     </form>
+     <div class="profi" >
+         <a th:href="@{/profile}">
+             Profile
+         </a>
+     </div>
+ </div>
+
+<div class="container">
+  <div class="container-fluid text-center">
+      <h2>Dashboard</h2>
+<br>
+  <table class="table">
+    <div class="thead-div">
+      <thead class="thead-dark" style="box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);">
+      <tr>
+        <th>EmpId</th>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Email</th>
+        <th>Department</th>
+        <th>Gender</th>
+        <th>Role</th>
+          <th>Action</th>
+      </tr>
+      </thead>
+    </div>
+
+    <tbody>
+    <tr th:each="employee : ${employeeList}" style="box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);">
+        <td th:text="${employee.id}"></td>
+        <td th:text="${employee.firstName}"></td>
+        <td th:text="${employee.lastName}"></td>
+        <td th:text="${employee.email}"></td>
+        <td th:text="${employee.department}"></td>
+        <td th:text="${employee.gender}"></td>
+        <td th:text="${employee.role}"></td>
+        <td>
+            <a th:href="@{'/employee/edit/' + ${employee.id}}">Edit</a>&nbsp;
+            <a th:href="@{'/employee/delete/' + ${employee.id}}">Delete</a>
+        </td>
+    </tr>
+          </tbody>
+        </table>
+</div>
+</div>
+</body>
+</html>

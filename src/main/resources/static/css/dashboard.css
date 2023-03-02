@@ -1,0 +1,102 @@
+
+ .container{
+ position: absolute;
+ background: #FFFFFF;
+ top:100px;
+ right:0px;
+  }
+  h2{
+    color:white;
+    margin-left: -930px;
+     font-family: 'Roboto';
+     font-size: 24px;
+     font-weight: 300;
+     color:#20272E;
+    }
+  h4{
+  color:white;
+   font-family: 'Roboto';
+   font-size: 17px;
+   font-weight: bold;
+   top:0px;
+  }
+  .navbar{
+        width: 16%;
+        height: 100vh;
+        left: 0px;
+        top: 0px;
+        background: #20272E;
+  }
+
+ .logo {
+  left: -10px;
+  justify-content: space-between;
+  list-style-type : none;
+  font-weight: 900;
+  color:white;
+  font-size:19px;
+  margin-top: -260px;
+ }
+  span{
+  color:#007AF3;
+  align: left;
+  }
+
+  .primary-nav {
+  top: 120px;
+  position: fixed;
+  left: 0px;
+  font-size:16px;
+  display: inline-block;
+  padding-bottom: 30px;
+  }
+  .ah{
+  color: #FFFFFF;
+  right: 0px;
+   justify-content: space-between;
+   list-style-type : none;
+  }
+
+ .nav{
+       position: absolute;
+       width: 84.7%;
+       height: 75px;
+       right: 0px;
+       top: 0px;
+       background: #20272E;
+ }
+
+
+ .searchinput{
+ position: relative;
+ width: 20%;
+ height: 39px;
+ left: 640px;
+ margin-top: 5px;
+ border-radius: 10px;
+ }
+ .fbutton{
+ width:10%;
+border-radius: 10px;
+ top: 80px;
+ margin-left: 640px;
+ }
+ .searchicon{
+ width: 3%;
+ color:#FFFFFF;
+ background: #FFFFFF;
+margin-left: -40px;
+ }
+
+.profi{
+position: absolute;
+width: 10%;
+ height: 34px;
+ margin-top: 30px;
+ background: white;
+margin-left: 88%;
+font-size: 26px;
+border-radius:10px;
+text-align: center;
+opacity:80%
+}
